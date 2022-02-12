@@ -1,7 +1,7 @@
 # CurrencyConverter
-SwiftUI Currency Converter App to exchange rates for any given currency using an API that provides course values.
-Supports Dark and Landscape mode.
-The application uses Swift Package dependency(Alamofire).
+- SwiftUI Currency Converter App to exchange rates for any given currency using an API that provides course values.
+- Supports Dark and Landscape mode.
+- The application uses Swift Package dependency(Alamofire).
 # Screenshots
 
 # Dark mode
