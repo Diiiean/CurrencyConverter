@@ -15,4 +15,5 @@ https://user-images.githubusercontent.com/86627602/153703501-79a9357d-1e63-4659-
 
 <img src="https://user-images.githubusercontent.com/86627602/153703396-7feaae8a-6822-4ae6-85f3-af5f5a249581.PNG" width=25% height=25%>
 # Usage
-To run the project, clone the repo
+
+- To run the project, clone the repo
