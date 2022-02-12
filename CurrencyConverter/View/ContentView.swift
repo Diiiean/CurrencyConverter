@@ -34,30 +34,6 @@ struct ContentView: View {
         }
         return String(format: "%.2f", conversion)
     }
-    func convertFrom(_ convert: String) -> String {
-        var conversion: Double = 1.0
-        let amount = Double(convert.doubleValue)
-        let stringAmount = String(amount)
-        let selectedCurrency = currencies[outputCurrency]
-        let to = currencies[inputCurrency]
-        switch (selectedCurrency) {
-        case "USD" :
-            let usdRates =  makeRequest(stringAmount: stringAmount, inputBase: "USD")
-            conversion = amount * (usdRates[to] ?? 0.0)
-        case "EUR" :
-            let euroRates = makeRequest(stringAmount: stringAmount, inputBase: "EUR")
-            conversion = amount * (euroRates[to] ?? 0.0)
-        case "BYN" :
-            let bynRates = makeRequest(stringAmount: stringAmount, inputBase: "BYN")
-            conversion = amount * (bynRates[to] ?? 0.0)
-        case "RUB" :
-            let rubRates = makeRequest(stringAmount: stringAmount, inputBase: "RUB")
-            conversion = amount * (rubRates[to] ?? 0.0)
-        default:
-            print("Somethimg went wrong!")
-        }
-        return String(format: "%.2f", conversion)
-    }
     ///API request
     func makeRequest(currencies: [String] = ["BYN", "EUR", "RUB", "USD"], stringAmount: String, inputBase: String) -> Dictionary<String, Double> {
         apiRequest(url: "https://api.exchangerate.host/latest?base=\(inputBase)&amount=\(stringAmount)") { currency in
